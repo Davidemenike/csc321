@@ -1,0 +1,155 @@
+# IPython log file
+
+# Mon, 07 Feb 2022 20:32:10
+ipaddress.ip_address("192.0.2.1")
+# Mon, 07 Feb 2022 20:34:37
+ipaddress.ip_address("192.0.2.1")
+# Mon, 07 Feb 2022 20:34:55
+import ipadress
+# Mon, 07 Feb 2022 20:36:54
+import ipaddress
+# Mon, 07 Feb 2022 20:36:57
+ipaddress.ip_address("192.0.2.1")
+#[Out]# IPv4Address('192.0.2.1')
+# Mon, 07 Feb 2022 20:37:55
+ipaddress.ip_address("2001:DB8::1")
+#[Out]# IPv6Address('2001:db8::1')
+# Mon, 07 Feb 2022 20:38:15
+ipaddress.ip_address(3221225985)
+#[Out]# IPv4Address('192.0.2.1')
+# Mon, 07 Feb 2022 20:38:26
+ipaddress.ip_address(42540766411282592856903984951653826561)
+#[Out]# IPv6Address('2001:db8::1')
+# Mon, 07 Feb 2022 20:42:23
+ipaddress.ip_address(1)
+#[Out]# IPv4Address('0.0.0.1')
+# Mon, 07 Feb 2022 20:42:37
+ipaddress.IPv4Address(1)
+#[Out]# IPv4Address('0.0.0.1')
+# Mon, 07 Feb 2022 20:42:45
+ipaddress.IPv6Address(1)
+#[Out]# IPv6Address('::1')
+# Mon, 07 Feb 2022 20:43:36
+ipaddress.ip_network("192.0.2.0/24")
+#[Out]# IPv4Network('192.0.2.0/24')
+# Mon, 07 Feb 2022 20:43:47
+ipaddress.ip_network("2001:db8::0/96")
+#[Out]# IPv6Network('2001:db8::/96')
+# Mon, 07 Feb 2022 20:43:56
+ipaddress.ip_network("192.0.2.1/24")
+# Mon, 07 Feb 2022 20:44:16
+ipaddress.ip_network(3221225984)
+#[Out]# IPv4Network('192.0.2.0/32')
+# Mon, 07 Feb 2022 20:44:32
+ipaddress.ip_network(42540766411282592856903984951653826560)
+#[Out]# IPv6Network('2001:db8::/128')
+# Mon, 07 Feb 2022 20:44:50
+ipaddress.ip_interface("192.0.2.1/24")
+#[Out]# IPv4Interface('192.0.2.1/24')
+# Mon, 07 Feb 2022 20:45:00
+ipaddress.ip_interface("2001:db8::1/96")
+#[Out]# IPv6Interface('2001:db8::1/96')
+# Mon, 07 Feb 2022 20:45:12
+addr4 = ipaddress.ip_address("192.0.2.1")
+# Mon, 07 Feb 2022 20:45:33
+addr6 = ipaddress.ip_address("2001:db8::1")
+# Mon, 07 Feb 2022 20:46:11
+addr6.version
+#[Out]# 6
+# Mon, 07 Feb 2022 20:46:25
+addr4.version
+#[Out]# 4
+# Mon, 07 Feb 2022 20:46:44
+host4 = ipaddress.ip_interface("192.0.2.1/24")
+# Mon, 07 Feb 2022 20:47:45
+host4.network
+#[Out]# IPv4Network('192.0.2.0/24')
+# Mon, 07 Feb 2022 20:48:43
+host6 = ipaddress.ip_interface("2001:db8::1/96")
+# Mon, 07 Feb 2022 20:49:03
+host6.network
+#[Out]# IPv6Network('2001:db8::/96')
+# Mon, 07 Feb 2022 20:49:17
+net4 = ipaddress.ip_network("192.0.2.0/24")
+# Mon, 07 Feb 2022 20:49:40
+net4.num_addresses
+#[Out]# 256
+# Mon, 07 Feb 2022 20:51:26
+net6 = ipaddress.ip_network("2001:db8::0/96")
+# Mon, 07 Feb 2022 20:51:59
+net6.num_addresses
+#[Out]# 4294967296
+# Mon, 07 Feb 2022 21:07:34
+net4 = ipaddress.ip_network("192.0.2.0/24")
+# Mon, 07 Feb 2022 21:08:23
+for x in net4.hosts():
+    print(x)
+# Mon, 07 Feb 2022 21:08:33
+net4 = ipaddress.ip_network("192.0.2.0/24")
+# Mon, 07 Feb 2022 21:08:44
+net4.netmask
+#[Out]# IPv4Address('255.255.255.0')
+# Mon, 07 Feb 2022 21:09:55
+net4.hostmask
+#[Out]# IPv4Address('0.0.0.255')
+# Mon, 07 Feb 2022 21:10:04
+net6 = ipaddress.ip_network("2001:db8::0/96")
+# Mon, 07 Feb 2022 21:10:10
+net6.netmask
+#[Out]# IPv6Address('ffff:ffff:ffff:ffff:ffff:ffff::')
+# Mon, 07 Feb 2022 21:10:16
+net6.hostmask
+#[Out]# IPv6Address('::ffff:ffff')
+# Mon, 07 Feb 2022 21:10:27
+addr6.exploded
+#[Out]# '2001:0db8:0000:0000:0000:0000:0000:0001'
+# Mon, 07 Feb 2022 21:10:32
+addr6.compressed
+#[Out]# '2001:db8::1'
+# Mon, 07 Feb 2022 21:11:10
+net6.exploded
+#[Out]# '2001:0db8:0000:0000:0000:0000:0000:0000/96'
+# Mon, 07 Feb 2022 21:11:18
+net6.compressed
+#[Out]# '2001:db8::/96'
+# Mon, 07 Feb 2022 21:11:33
+net4[1]
+#[Out]# IPv4Address('192.0.2.1')
+# Mon, 07 Feb 2022 21:11:36
+net4[-1]
+#[Out]# IPv4Address('192.0.2.255')
+# Mon, 07 Feb 2022 21:11:42
+net6[1]
+#[Out]# IPv6Address('2001:db8::1')
+# Mon, 07 Feb 2022 21:11:45
+net6[-1]
+#[Out]# IPv6Address('2001:db8::ffff:ffff')
+# Mon, 07 Feb 2022 21:12:14
+addr4 = ipaddress.ip_address("192.0.2.1")
+# Mon, 07 Feb 2022 21:13:37
+addr4 in ipaddress.ip_network("192.0.2.0/24")
+#[Out]# True
+# Mon, 07 Feb 2022 21:13:46
+addr4 in ipaddress.ip_network("192.0.3.0/24")
+#[Out]# False
+# Mon, 07 Feb 2022 21:13:56
+ipaddress.ip_address("192.0.2.1") < ipaddress.ip_address("192.0.2.2")
+#[Out]# True
+# Mon, 07 Feb 2022 21:14:04
+addr4 = ipaddress.ip_address("192.0.2.1")
+# Mon, 07 Feb 2022 21:14:17
+str(addr4)
+#[Out]# '192.0.2.1'
+# Mon, 07 Feb 2022 21:14:23
+int(addr4)
+#[Out]# 3221225985
+# Mon, 07 Feb 2022 21:15:38
+try:
+    network = ipadress.IPv4Network(address)
+except ValueError:
+    print("address/netmask is invalid for IPv4:", address)
+# Mon, 07 Feb 2022 21:16:30
+try:
+    network = ipaddress.IPv4Network(address)
+except ValueError:
+    print("address/netmask is invalid for IPv4:", address)
